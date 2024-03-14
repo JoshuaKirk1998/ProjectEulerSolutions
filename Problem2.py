@@ -5,5 +5,23 @@ will be: 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ... etc. By considering the terms in
 """
 
 
+#define the funtion with n as the parameter
+def Fibonnacci(n):
+    #set up the fib sequence
+    old = 1
+    new = 1
+    sum = 0
+    while new < n:
+        next = old + new
+        old = new
+        new = next
+        #add all the evens
+        if (next % 2) == 0:
+            sum += next
+    #return all the sums
+    return sum
+        
 
-#lets see if this works
+#main to test
+if __name__ == "__main__":
+    print(Fibonnacci(4000000))
